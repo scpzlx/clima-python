@@ -1,9 +1,11 @@
 import requests
 
+
 def obtener_tiempo(ciudad, api_key):
     url = f"http://api.openweathermap.org/data/2.5/weather?q={ciudad}&appid={api_key}&units=metric"
     print("URL:", url)
     response = requests.get(url)
+
     print("Respuesta:", response.json())
 
     if response.status_code == 200:
