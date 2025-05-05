@@ -23,4 +23,3 @@ ciudad = "Guasave"
 api_key = "7b8dcdc023d38c6e99aa6a15d01ac41e"
 
 obtener_tiempo(ciudad, api_key)
-
