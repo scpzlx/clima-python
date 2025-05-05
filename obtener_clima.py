@@ -1,7 +1,18 @@
 import requests
 
-
 def obtener_tiempo(nombre_ciudad, clave_api):
+    """
+    Obtiene el clima actual de una ciudad usando la API de OpenWeatherMap.
+
+    Parámetros:
+    nombre_ciudad (str): El nombre de la ciudad para la que se desea obtener el clima.
+    clave_api (str): La clave de la API de OpenWeatherMap.
+
+    Imprime:
+    - El clima actual de la ciudad.
+    - La temperatura en grados Celsius.
+    - La sensación térmica en grados Celsius.
+    """
     url = (
         "http://api.openweathermap.org/data/2.5/weather"
         f"?q={nombre_ciudad}&appid={clave_api}&units=metric"
