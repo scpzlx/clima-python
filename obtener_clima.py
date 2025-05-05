@@ -1,10 +1,10 @@
 import requests
 
 
-def obtener_tiempo(ciudad, api_key):
+def obtener_tiempo(nombre_ciudad, clave_api):
     url = (
         "http://api.openweathermap.org/data/2.5/weather"
-        f"?q={ciudad}&appid={api_key}&units=metric"
+        f"?q={nombre_ciudad}&appid={clave_api}&units=metric"
     )
     print("URL:", url)
     response = requests.get(url)
@@ -15,13 +15,13 @@ def obtener_tiempo(ciudad, api_key):
         temperatura = datos["main"]["temp"]
         sensacion_termica = datos["main"]["feels_like"]
 
-        print(f"El clima en {ciudad} es: {clima}")
+        print(f"El clima en {nombre_ciudad} es: {clima}")
         print(f"Temperatura: {temperatura}°C")
         print(f"Sensación térmica: {sensacion_termica}°C")
     else:
         print("Error al obtener el tiempo. Verifica la ciudad y la API key.")
 
 
-ciudad = "Guasave"
-api_key = "7b8dcdc023d38c6e99aa6a15d01ac41e"
-obtener_tiempo(ciudad, api_key)
+CIUDAD = "Guasave"
+API_KEY = "7b8dcdc023d38c6e99aa6a15d01ac41e"
+obtener_tiempo(CIUDAD, API_KEY)
