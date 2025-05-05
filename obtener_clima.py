@@ -2,7 +2,10 @@ import requests
 
 
 def obtener_tiempo(ciudad, api_key):
-    url = f"http://api.openweathermap.org/data/2.5/weather?q={ciudad}&appid={api_key}&units=metric"
+    url = (
+        "http://api.openweathermap.org/data/2.5/weather"
+        f"?q={ciudad}&appid={api_key}&units=metric"
+    )
     print("URL:", url)
     response = requests.get(url)
 
